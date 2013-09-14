@@ -24,3 +24,7 @@ module AudioCalc
     # config.i18n.default_locale = :de
   end
 end
+config.assets.precompile += ["fontawesome-webfont.ttf",
+                             "fontawesome-webfont.eot",
+                             "fontawesome-webfont.svg",
+                             "fontawesome-webfont.woff"]
