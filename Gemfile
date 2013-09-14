@@ -18,6 +18,8 @@ gem 'twitter-bootstrap-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap_helper'
+gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'rails_12factor'
