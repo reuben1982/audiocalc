@@ -135,6 +135,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  activesupport
   bootstrap_helper
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
