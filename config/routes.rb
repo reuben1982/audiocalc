@@ -2,6 +2,10 @@ AudioCalc::Application.routes.draw do
   get "main/home"
   get "main/crossover"
   get "main/enclosure"
+  post "main/crossover"
+  get "main/twoway"
+  get "main/threeway"
+  post "main/twoway"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,93 @@
+<div class= "span1 pull-left">
+	
+</div>
+<div class="span2 pull-right sidebar-nav">
+	<ul class="nav nav-list">
+	    <li class="nav-header">What we are?</li>
+	    <li class="active"><a href="#">Home</a></li>
+	    <li><a href="#">Our Clients</a></li>
+	    <li><a href="#">Our Services</a></li>
+	    <li><a href="#">About Us</a></li>
+	    <li><a href="#">Contact Us</a></li>
+	    <li class="nav-header">Our Friend</li>
+	    <li><a href="#">Google</a></li>
+	    <li><a href="#">Yahoo!</a></li>
+	    <li><a href="#">Bing</a></li>
+	    <li><a href="#">Microsoft</a></li>
+	    <li><a href="#">Gadgetic World</a></li>
+	</ul>
+</div><!--/.well -->	 
+<div class="span5">
+	 <div class="hero-unit">
+		<h2 class="text-info">2-way Crossover Calculator</h2><br />
+			<%= form_tag do %>
+			 <%= field_set_tag  do %>
+		 		Order &amp; type: <%=select_tag "order_type", options_for_select(@order_types.map{ |value| [value,value]}, @selected_type),:include_blank => true, :onchange => "this.form.submit();"%>
+		 		<%case%> 
+		 		 <%when @selected_type == "1st_Order"%>
+		 		  <%=select_tag "order_type2", options_for_select([['Butterworth', 5],['Sollen-split', 6]])%>
+		 		 <%when @selected_type == "2nd_Order"%>
+		 		  <%=select_tag "order_type2", options_for_select([['Butterworth', 5],['Linkwitz-Riley', 7],['Bessel', 8]])%>
+		 		 <%when @selected_type == "3rd_Order"%>
+		 		  <%=select_tag "order_type2", options_for_select([['Butterworth', 5],['Bessel', 8]])%>
+		 		 <%when @selected_type == "4th_Order"%>
+		 		  <%=select_tag "order_type2", options_for_select([['Butterworth', 5],['Linkwitz-Riley', 7],['Bessel', 8]])%>
+		 		 <%end%>
+		 		 <br />	  
+		 		Crossover Frequency:&nbsp;<%=number_field_tag'freq_one', @freq_one,:min => 21, :max => 19999  %>&nbsp;hz<br />
+		 		
+				Tweeter Impedence:&nbsp;<%=number_field_tag'tweeter', @tweeter,:min => 1,:max => 99   %>&nbsp;ohms<br />
+				Woofer Impedence:&nbsp;<%=number_field_tag 'woofer', @woofer,:min => 1,:max => 99  %>&nbsp;ohms<br />
+				<br />
+			  <div class="offset1">
+		 	  <%= submit_tag "Calculate",:class => "btn btn-danger btn-large"%>
+		 	  </div>
+		 	<%end%> 	
+		  <%end%>
+	</div>
+</div>
+<%if params[:commit]%>	
+	<div class="span4 hero-unit">
+		
+		<%=show_params%>
+		
+	</div>
+<%end%>          
+       
+<!--		 		
+	
+    <p class="text-primary">Select crossover &amp; type</p>
+	 <div class="row">
+		 <select class="form-control">
+		  <option>1</option>
+		  <option>2</option>
+		  <option>3</option>
+		  <option>4</option>
+		  <option>5</option>
+		 </select>
+		 <select class="form-control">
+		  <option>a</option>
+		  <option>b</option>
+		  <option>c</option>
+		 </select>
+	 </div><br />
+
+ 
+ 	<p class="text-primary">enter speaker impeadance</p>
+    <div class="row">
+	  <div class="col-lg-2">
+	    <input type="text" class="form-control" placeholder=".col-lg">
+	  
+	    <input type="text" class="form-control" placeholder=".col-lg">
+	  
+	    <input type="text" class="form-control" placeholder=".col-lg">
+	
+	</div>
+
+    
+    <a href="#" class="btn btn-large btn-success">calculate</a>
+	    
+	
+	<button type="button" class="btn btn-info">clear</button>
+	
+	<button type="button" class="btn btn-warning">back</button>-->

@@ -1,52 +1,28 @@
 
-<div class= "span1 pull-right">
+<div class= "span1 pull-left">
 	
 </div>	 
-<div class="span8 pull-left">
+<div class="span6 pull-left">
  <div class="hero-unit" >
     <h1>Crossover calculator</h1>
- 
-    <p class="text-primary">Select crossover &amp; type</p>
-	 <div class="row">
-		 <select class="form-control">
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
-		 </select>
-		 <select class="form-control">
-		  <option>a</option>
-		  <option>b</option>
-		  <option>c</option>
-		 </select>
-	 </div><br />
-
- 
- 	<p class="text-primary">enter speaker impeadance</p>
-    <div class="row">
-	  <div class="col-lg-2">
-	    <input type="text" class="form-control" placeholder=".col-lg">
-	  
-	    <input type="text" class="form-control" placeholder=".col-lg">
-	  
-	    <input type="text" class="form-control" placeholder=".col-lg">
+<!--<a href="#" class="btn btn-warning btn-large">2-way Crossover  <i class="icon-volume-up"></i></a>
+<button type="button" class="btn btn-warning">back</button>-->
+	<div class="offset1">
+	<%= form_tag do %>
+		<br />
+		<h4>Select 2-way or 3-way crossover:</h4>
+	   	<br />
+	   	<div class="offset1">
+	   	<%= link_to '2-way Crossover', main_twoway_path, :class => "btn btn-info btn-large"%>&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;		
+	   	<%= link_to '3-way Crossover', main_threeway_path, :class => "btn btn-warning btn-large"%>&nbsp;
+	   	</div>
+	<% end %>
 	
-	</div>
-
-    
-    <a href="#" class="btn btn-large btn-success">calculate</a>
-	    
-	<!-- Contextual button for informational alert messages -->
-	<button type="button" class="btn btn-info">clear</button>
-	
-	<!-- Indicates caution should be taken with this action -->
-	<button type="button" class="btn btn-warning">back</button>
 	 </div>
  </div>
 </div>
- <div class="span2 pull-right">
-          <div class="well sidebar-nav">
+
+          <div class="span2 pull-right sidebar-nav">
             <ul class="nav nav-list">
 			    <li class="nav-header">What we are?</li>
 			    <li class="active"><a href="#">Home</a></li>
@@ -62,6 +38,6 @@
 			    <li><a href="#">Gadgetic World</a></li>
 			</ul>
           </div><!--/.well -->
-        </div><!--/span-->
+       
 
 
