@@ -6,28 +6,27 @@
    	<h2 class="z">Calculators</h2>
    	<div class="modal-body">
 	<div class="container-fluid">
-			<a  href="" target="_blank">
-		    <%= image_tag("twowaypic.JPG",:class => "img-circle") %>
+			<a  href="main_twoway_path" target="_blank"><%= link_to "", main_twoway_path  %>
+		    <%=link_to image_tag("twowaypic.JPG", :class => "img-circle"), main_twoway_path %>
 		    </a>
-			<a  href="" target="_blank"><span class="b"><b>2-way X-over</b></span> </a>
+			<b><%= link_to "2-way X-over", main_twoway_path, :class => "b" %></b>
 		  
 		</div>
 	</div>  
 	<div class="modal-body">
 	<div class="container-fluid">
-			<a  href="" target="_blank">
-		    <%= image_tag("threewaypic.JPG",:class => "img-circle") %>
+			<a  href="main_twoway_path" target="_blank"><%= link_to "", main_crossover_path  %>
+		    <%=link_to image_tag("threewaypic.JPG", :class => "img-circle"), main_crossover_path %>
 		    </a>
-			<a  href="" target="_blank"><span class="b"><b>3-way X-over</b></span> </a>
-		  
+			<b><%= link_to "3-way X-over", main_twoway_path, :class => "b" %></b>
 		</div>
 	</div>              
    <div class="modal-body">
 	<div class="container-fluid">
-			<a  href="" target="_blank">
-		    <%= image_tag("enclosurepic.JPG",:class => "img-circle") %>
+			<a  href="main_enclosure_path" target="_blank"><%= link_to "", main_enclosure_path  %>
+		    <%=link_to image_tag("enclosurepic.JPG", :class => "img-circle"), main_enclosure_path %>
 		    </a>
-			<a  href="" target="_blank"><span class="b"><b>Enclosure</b></span> </a>
+			<b><%= link_to "Enclosure calc", main_enclosure_path, :class => "b" %></b>
 		  
 		</div>
 	</div>        
@@ -39,7 +38,7 @@
    	<h2 class="z">Other Links</h2>
    	<div class="modal-body">
 	<div class="container-fluid">
-			<a  href="" target="_blank">
+			<a  href="http://reubenlecea.info/"  target="_blank">
 		    <%= image_tag("aboutmepic.JPG",:class => "img-circle ") %>
 		    </a>
 			<a  href="" target="_blank"><span class="c"><b>about</b></span> </a>
@@ -48,7 +47,7 @@
 	</div>
 	<div class="modal-body">
 	<div class="container-fluid">
-			<a  href="" target="_blank">
+			<a  href="http://hifimonitorstand.com/" target="_blank">
 		    <%= image_tag("projectspic.JPG",:class => "img-circle") %>
 		    </a>
 			<a  href="" target="_blank"><span class="c"><b>my projects</b></span> </a>
@@ -57,7 +56,7 @@
 	</div>
 	<div class="modal-body">
 	<div class="container-fluid">
-			<a  href="" target="_blank">
+			<a  href="http://reubenlecea.info/" target="_blank">
 		    <%= image_tag("resumepic.JPG",:class => "img-circle") %>
 		    </a>
 			<a  href="" target="_blank"><span class="c"><b>my resume</b></span> </a>
